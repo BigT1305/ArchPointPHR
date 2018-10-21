@@ -20,8 +20,15 @@ namespace ArchPointPHR.Pages.Medications
 
         public IList<Medication> Medication { get;set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
+            //using System.Linq
+            var medications = from m in _context.Medication
+                              select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                medications = medications.Where(s => s.Name.Contains(searchString));
+            }
             Medication = await _context.Medication.ToListAsync();
         }
     }
