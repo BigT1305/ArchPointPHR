@@ -13,6 +13,9 @@
 
 <form>
     <p>
+        <select asp-for="MedClassification" asp-items="Model.Name">
+            <option value="">All</option>
+        </select>
         Name: <input type="text" name="SearchString">
         <input type="submit" value="Filter" />
     </p>
