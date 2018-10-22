@@ -26,7 +26,8 @@ namespace ArchPointPHR.Models
                         Physician = "John Dee, MD",
                         Quantity = 2,
                         Dosage = "20mg",
-                        Reason = ""
+                        Reason = "",
+                        Type = "Cholesterol Medication"
                     },
 
                     new Medication
@@ -36,6 +37,7 @@ namespace ArchPointPHR.Models
                         Quantity = 2,
                         Dosage = "30mg",
                         Reason = "",
+                        Type = "Heart and Stroke"
                     },
 
                     new Medication
@@ -44,7 +46,8 @@ namespace ArchPointPHR.Models
                         Physician = "John Dee, MD",
                         Quantity = 2,
                         Dosage = "200mg",
-                        Reason = ""
+                        Reason = "",
+                        Type = "Arthritis"
                     }
                    );
                 context.SaveChanges();

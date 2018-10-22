@@ -15,5 +15,6 @@ namespace ArchPointPHR.Models
 
         public string Dosage { get; set; }
         public string Reason { get; set; }
+        public string Type { get; set; }
     }
 }
