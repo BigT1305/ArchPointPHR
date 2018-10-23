@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using ArchPointPHR.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+
+
 namespace ArchPointPHR.Pages.Medications
 {
     public class IndexModel : PageModel
