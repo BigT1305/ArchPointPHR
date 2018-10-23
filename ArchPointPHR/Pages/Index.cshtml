@@ -62,9 +62,28 @@
     }
     }
 </style>
+
+
+
+<script type="text/javascript">
+    function display(form) {
+        if (form.username.value == "root") {
+            if (form.password.value == "root") {
+                location = "about"
+            }
+            else {
+                alert("Invalid Password")
+            }
+        } else {
+            alert("Invalid Username")
+        }
+    }
+</script>
+
+
 <center><h3>Welcome to Archpoint PHR</h3></center>
 <center>
-    <form action="action_page.php">
+    <form>
         <table>
             <tr>
                 <td><h2>Login Here</h2></td>
@@ -72,18 +91,18 @@
             <tr>
                 <td>
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <input type="text" name="username" /><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" name="password" /><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="submit">Login</button>
+                    <input type="button" value="Login" onClick="display(this.form)" />
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
@@ -95,42 +114,42 @@
 
 <br /> <br />
 
-       <center>
+<center>
 
-           <form action="register_page.php">
-               <table>
-                   <tr>
-                       <td><h2>Register Here</h2></td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <label for="fname"><b>First name</b></label>
-                           <input type="text" placeholder="Enter First name" name="fname" required>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <label for="lname"><b>Last name</b></label>
-                           <input type="text" placeholder="Enter Last name" name="lname" required>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <label for="eAddr"><b>Email Address</b></label>
-                           <input type="text" placeholder="Enter Email" name="eAddr" required>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <label for="psw"><b>Password</b></label>
-                           <input type="password" placeholder="Enter Password" name="psw" required>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <button type="submit">Register</button>
-                       </td>
-                   </tr>
-               </table>
-           </form>
-       </center>
+    <form action="register_page.php">
+        <table>
+            <tr>
+                <td><h2>Register Here</h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname"><b>First name</b></label>
+                    <input type="text" placeholder="Enter First name" name="fname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname"><b>Last name</b></label>
+                    <input type="text" placeholder="Enter Last name" name="lname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="eAddr"><b>Email Address</b></label>
+                    <input type="text" placeholder="Enter Email" name="eAddr" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
