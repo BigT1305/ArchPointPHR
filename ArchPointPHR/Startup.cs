@@ -35,7 +35,7 @@ namespace ArchPointPHR
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+               
             services.AddDbContext<ArchPointPHRContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ArchPointPHRContext")));
         }
