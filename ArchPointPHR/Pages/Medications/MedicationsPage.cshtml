@@ -1,0 +1,16 @@
+﻿@page "{id}"
+{
+    var medicationId = RouteData.Values["id"];
+}
+@model MedicationsPageModel
+@{
+    @functions{
+        public int ID { get; set; }
+
+        public void OnGet(int id)
+        {
+            ID = id;
+        }
+    }
+}
+<p>The ID is @ID.</p>

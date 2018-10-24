@@ -33,7 +33,7 @@ namespace ArchPointPHR
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            //Includes support for Razor pages and controllers.
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
                
             services.AddDbContext<ArchPointPHRContext>(options =>
